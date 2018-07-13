@@ -13,4 +13,9 @@ public class MyManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void BuilderOnlyMethod()
+    {
+
+    }
 }
