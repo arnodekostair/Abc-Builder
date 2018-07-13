@@ -6,10 +6,15 @@ public class AbcBuilderOnly : MonoBehaviour {
 
     [SerializeField]
     private Transform sceneObjectsRootTransform;
-    
+
+    private MyManager myManager;
+
     // Use this for initialization
 	void Start ()
     {
+        myManager = new MyManager();
+        myManager.BuilderOnlyMethod();
+
         GameObject newGO = new GameObject("AGameObject");
         newGO.AddComponent<FirstBehavior>();
 
