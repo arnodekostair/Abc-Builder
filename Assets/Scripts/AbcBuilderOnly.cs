@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class AbcBuilderOnly : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    [SerializeField]
+    private Transform sceneObjectsRootTransform;
+    
+    // Use this for initialization
+	void Start ()
+    {
+        GameObject newGO = new GameObject("AGameObject");
+        newGO.AddComponent<FirstBehavior>();
+
+        newGO.transform.SetParent(sceneObjectsRootTransform);
 	}
 	
 	// Update is called once per frame
